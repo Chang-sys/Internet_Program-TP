@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab</title>
+
+</head>
+
+<body class="flex item-center">
+
+    <!-- background -->
+    <div
+        class="flex flex-col bg-gray-200 my-3 px-3 py-3 m-auto w-6/12 h-full border-[6px] border-black shadow-2xl shadow-gray-600/50 text-center">
+
+        <!-- text: About -->
+        <div class="flex flex-col mt-12">
+            <p class="text-4xl text-indigo-900">About</p>
+            <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Earum, aperiam</p>
+        </div>
+
+        <!-- image -->
+        <div class="h-1/4 mt-16">
+            <img src="./landScape.jpg"
+                class="rounded-3xl border-2 border-white shadow-2xl shadow-slate-100 w-full h-80">
+        </div>
+
+
+        <!-- Tab and Text wrapper -->
+        <div class="flex flex-col mb-14 item-center">
+
+            <!-- // Tab bar only -->
+            <div class="mt-9 flex flex-row rounded-xl text-center">
+                <!-- tab1 -->
+                <div class="bg-zinc-300 m-auto w-96 h-[3rem] text-xl felx flex-row rounded-tl-lg">
+                    <button class="w-full h-full bg-white tablink" onclick="openTab(event, 'textHistroy')">History</button>
+                </div>
+
+                <!-- tab2 -->
+                <div class="bg-zinc-300 tabbg m-auto text-xl w-96 h-[3rem] felx flex-row">
+                    <button class="w-full h-full tablink" onclick="openTab(event, 'textVision')">Vision</button>
+                </div>
+
+                <!-- tab3 -->
+                <div class="bg-zinc-300 m-auto text-xl w-96 h-[3rem] felx flex-row">
+                    <button class="w-full h-full tablink" onclick="openTab(event, 'textGoals')">Goals</button>
+                </div>
+            </div>
+
+            <!-- // Text boxes -->
+            <div id="textHistroy" class="para bg-white flex flex-col w-full text-left px-8">
+                <p class="font-bold font-serif text-2xl mt-10 mb-5">History<br></p>
+                <p class="mb-16 font-serif text-[14.5px] text-gray-500">
+                    I'm baby wolf pickled schlitz
+                    try-hard normcore marfa man bun mumblecore vice pop-up XOXO lomo
+                    kombucha glossier bicycle rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard tilde
+                    try-
+                    hard, woke fixie banjo man bun. Small batch tumeric mustache tbh wayfarers 8-bit shaman
+                    chartreuse tacos. Viral direct trade hoodie ugh chambray, craft beer pork belly flannel tacos
+                    single-
+                    origin coffee art party migas plaid pop-up.
+                </p>
+            </div>
+
+
+            <div id="textVision" class="para hidden bg-white flex flex-col w-full text-left px-8">
+                <p class="font-bold font-serif text-2xl mt-10 mb-5">Vision<br></p>
+                <p class="font-serif text-[14.5px] text-gray-500 mb-2">
+                    Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth crucifix offal deep v hella
+                    biodiesel. Church-key listicle polaroid put a bird on it chillwave palo santo enamel pin, tattooed
+                    meggings franzen la croix cray. Retro yr aesthetic four loko tbh helvetica air plant, neutra palo
+                    santo tofu mumblecore. Hoodie bushwick pour-over jean shorts chartreuse shabby chic. Roof party
+                    hammock master cleanse pop-up truffaut, bicycle rights skateboard affogato readymade sustainable
+                    deep v live-edge schlitz narwhal.
+                <ul style="list-style-type: none;" class="mb-6 ">
+                    <li>list item</li>
+                    <li>list item</li>
+                    <li>list item</li>
+                </ul>
+                </p>
+            </div>
+
+            <div id="textGoals" class="para hidden bg-white flex flex-col w-full text-left px-8">
+                <p class="font-bold font-serif text-2xl mt-10 mb-5 h-[20px]">Goals<br></p>
+                <p class="mb-16 font-serif text-[14.5px] text-gray-500">
+                    The main goal of a web page is to effectively communicate information to its intended audience. 
+                    This can involve providing information about a company, product, or service, as well as allowing users to interact with the content through forms, links, and other features. 
+                    Other goals may include increasing brand awareness, promoting a specific call-to-action, capturing leads, or facilitating e-commerce transactions. 
+                    A well-designed web page should be easy to navigate, visually appealing, and optimized for search engines to increase its visibility and drive traffic. 
+                    Ultimately, the success of a web page is determined by its ability to achieve its specific objectives and provide a positive user experience.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="./tailWind.js"></script>
+
+    <script>
+        function openTab(evt, textBox) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("para");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" bg-white", "");
+            }
+            document.getElementById(textBox).style.display = "block";
+            evt.currentTarget.className += " bg-white";
+        }
+    </script>
+</body>
+
+</html>
