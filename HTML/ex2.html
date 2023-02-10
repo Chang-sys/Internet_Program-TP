@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list with SessionStorage</title>
+    <link rel="stylesheet" href="../CSS/ex2.css">
+</head>
+
+<body>
+
+    <!-- Grand div -->
+    <div class="w-full flex items-center">
+        <!-- parent div -->
+        <div class="flex flex-col bg-white my-3 px-3 py-3 m-auto w-6/12 border-4 border-black">
+            <!-- Headertext -->
+            <div class="text-base font-bold flex flex-row justify-center text-center">
+                <p>To-do list with SessionStorage</p>
+            </div>
+
+            <!-- Input items -->
+            <div class="bg-zinc-300 w-full h-[6rem] my-3 flex flex-row rounded-xl">
+                <!-- Task Title -->
+                <div class="mx-2 mt-3">
+                    <label for="title">Task Title</label>
+
+                    <!-- Input -->
+                    <div>
+                        <input id="title" type="text" placeholder="Title"
+                            style="width: 180px; height: 45px; border-radius: 10px; text-indent: 10px;">
+                    </div>
+                </div>
+
+                <!-- Assignee -->
+                <div class="mx-2 mt-3">
+                    <label for="assignee">Assignee</label>
+
+                    <!-- Input -->
+                    <div>
+                        <input id="assignee" type="text" placeholder="Jonh"
+                            style="width: 180px; height: 45px; border-radius: 10px; text-indent: 10px;">
+                    </div>
+                </div>
+
+                <!-- Date line-->
+                <div class="mx-2 mt-3">
+                    <label for="dateLine">Date line</label>
+
+                    <!-- Input -->
+                    <div class="">
+                        <input type="date" id="deadline" name="date-line" value="2018-07-22" min="2000-01-01"
+                            max="2050-12-31"
+                            style="width: 180px; height: 45px; border-radius: 10px; text-indent: 10px;">
+                    </div>
+                </div>
+
+                <!-- Add button -->
+                <div class="mx-2 mt-11">
+                    <input type="button" id="add-btn" class="h-10 w-16 bg-blue-400 text-white text-cyan-50 rounded-xl" value="Add">
+                </div>
+            </div>
+
+            <!-- list All elements -->
+            <div id="list-wrapper"></div>
+
+        </div>
+
+    </div>
+
+    <script src="../JS/tailWind.js"></script>
+    <script src="../JS/ex2.js"></script>
+</body>
+
+</html>

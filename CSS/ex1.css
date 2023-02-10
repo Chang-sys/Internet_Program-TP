@@ -1,0 +1,18 @@
+input {
+    float: left;
+    margin-top: 5px;
+    text-align: left;
+    text-indent: 10px; 
+    border: solid 1.5px #D3D3D3;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+
+  input[type=text]:hover{
+    box-shadow: 0 0 5pt 0.5pt #101010;
+  }
+
+  input[type=text]:focus {
+    box-shadow: 0 0 5pt 2pt #000000;
+    outline-width: 0px;
+  }
