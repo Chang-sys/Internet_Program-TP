@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book shop CRUD (Create, Remove, Update, and Delete)</title>
+</head>
+
+<body>
+    <div id="parent" class=" h-fit min-h-[40rem] mx-32 mt-4 mb-32 flex flex-row ">
+        <div
+            class=" w-[18rem] min-w-[6rem] m-3 pl-3 pr-12 border-[0.1rem] mb-[-0.5rem] border-gray-400 rounded-sm bg-gray-200">
+            <label class="">Name:</label><br>
+            <input type="text" id="name" placeholder="c programming"
+                class="w-full border-[0.09rem] rounded-sm border-gray-500">
+            <label>Category:</label><br>
+            <input type="text" id="category" placeholder="code"
+                class="w-full  border-[0.09rem] rounded-sm border-gray-500">
+            <label>Price</label><br>
+            <input type="number" id="price" placeholder="1.000 riels"
+                class="w-full  border-[0.09rem] rounded-sm border-gray-500">
+
+            <button id="add" class=" border-[0.09rem] rounded-sm px-2 my-1 border-gray-500">Add</button>
+            <button id="clear" class=" border-[0.09rem] rounded-sm px-2  my-1 border-gray-500">Clear</button>
+        </div>
+        <div id="bookList" class=" w-[99rem] min-w-[17rem] p-2 mb-[-0.5rem] bg-gray-200">
+        </div>
+    </div>
+
+    <script src="../JS/tailWind.js"></script>
+    <script src="../JS/ex6.js"></script>
+</body>
+
+</html>

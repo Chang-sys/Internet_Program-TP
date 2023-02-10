@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a live camera video into multiple projection within Canvas and crop them with OpenCV library</title>
+    <script src="../JS/tailWind.js"></script>
+</head>
+<body class="w-full h-[100vh] flex justify-center items-center">
+    <video autoplay playsinline webkit-playsinline muted hidden id="videoElement"></video>
+    <div class="bg-[#808080] w-[700px] h-[550px] px-4 pt-2">
+        <canvas id="canvas" class="w-full h-[88%] border-2 border-black"></canvas>
+        <div>
+            <div class="flex justify-center">Canvas 👻 : Please show your on me</div>
+            <div class="flex justify-center">
+                <button class="bg-white rounded-sm" id="btn" type="button" onclick="pauseVdo()">Pause</button>
+            </div>
+        </div> 
+    </div> 
+    <canvas id="canvasOutput" class="ml-2 w-[700px] h-[550px]"></canvas>
+    
+    
+    <script src="../JS/ex5.js"></script>
+</body>
+</html>

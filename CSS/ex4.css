@@ -1,0 +1,29 @@
+canvas {
+    width: 37rem;
+    height: 27rem;
+    border: 2px solid black;
+    background-color: white;
+}
+
+div {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.26rem;
+    padding-bottom: 0;
+    background-color: rgb(108, 108, 108);
+    margin-left: 24rem;
+    position: relative;
+}
+
+#opt {
+    bottom: 0.2rem;
+    display: block;
+    margin-left: 10rem;
+    color: white;
+
+}
+
+button {
+    display: block;
+    margin-left: 5rem;
+}   
