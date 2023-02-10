@@ -1,0 +1,97 @@
+body{
+    margin: 30px;
+}
+
+.wrapper{
+    margin: 40px;
+    padding: 100px 192px 100px 80px; /* TOP RIGHT BOTTOM LEFT  */
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center;
+    justify-self: center;
+    border: 3px solid black;
+    box-shadow: 0 0 0 2px black;
+}
+
+.I-rowTop{
+    display: grid;
+    grid-column: 1;
+    column-gap: 50px;
+    background-color: palevioletred;
+    width: 70px;
+    height: 70px;
+    justify-self: end;
+}
+
+.I-Column{
+    display: grid;
+    grid-column: 1;
+    column-gap: 50px;
+    background-color: palevioletred;
+    width: 70px;
+    height: 300px;
+    justify-self: end;
+}
+
+.I-Bottom{
+    display: grid;
+    grid-column: 1;
+    column-gap: 50px;
+    background-color: palevioletred;
+    width: 70px;
+    height: 70px;
+    justify-self: end;
+}
+
+.T-row{
+    width: 350px;
+    height: 70px;
+    background-color: greenyellow;
+    align-self: end;
+    align-self: center;
+    justify-self: center;
+}
+
+.T-column{
+    display: grid;
+    grid-column: 2;
+    background-color: greenyellow;
+    width: 70px;
+    height: 300px;
+    align-self: center;
+    justify-self: center;
+}
+
+.T-Bottom{
+    display: grid;
+    grid-column: 2;
+    background-color: greenyellow;
+    width: 70px;
+    height: 70px;
+    align-self: center;
+    justify-self: center;
+}
+
+.C-rowTOP{
+    width: 180px;
+    grid-column: 3;
+    height: 70px;
+    background-color: orange;
+    align-self: end;
+}
+
+.C-column{
+    display: grid;
+    grid-column: 3;
+    background-color: orange;
+    width: 70px;
+    height: 300px;
+}
+
+.C-rowBottom{
+    width: 180px;
+    grid-column: 3;
+    height: 70px;
+    background-color: orange;
+}

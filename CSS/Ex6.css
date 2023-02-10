@@ -1,0 +1,46 @@
+body{
+    margin: 20px;
+}
+
+.wrapper{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small{
+    display: none;
+}
+
+.content{
+    width: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.big{
+    background-color: greenyellow;
+    padding: 15px;
+    font-size: 45px;
+}
+
+@media screen and (max-width: 792px){
+    
+    .big{
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    
+    .big{
+        display: none;
+    }
+    .small{
+        display: block;
+        background-color: orangered;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,43 @@
+
+body{
+    margin-top: 50px;
+    margin-left: 270px;
+}
+
+table{
+    width: 80%;
+    border: 3px solid black;
+}
+
+tr{
+    width: 400px;
+    height: 200px;
+}
+
+.style1{
+    background-color: red;
+}
+
+.style2{
+    background-color: blue;
+}
+
+.style3{
+    background-color: green;
+}
+
+.style4{
+    background-color: pink;
+}
+
+.style5{
+    background-color: gray;
+}
+
+.style6{
+    background-color: orange;
+}
+
+.style7{
+    background-color: purple;
+}

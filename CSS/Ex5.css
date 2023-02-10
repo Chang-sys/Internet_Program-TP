@@ -1,0 +1,23 @@
+body{
+    margin: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.box{
+    margin: 7px;
+    padding: 13px;
+    width: 450px;
+    height: 30px;
+    display: grid;
+    justify-items: center;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
