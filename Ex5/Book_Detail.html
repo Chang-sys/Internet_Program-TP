@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Book Detail</title>
 
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
@@ -20,25 +21,22 @@
             box-sizing: border-box;
         }
 
-        .container {
-            width: 100%;
-            height: auto;
+        #wrapper {
+            width: 50%;
+            height: 93vh;
             display: flex;
-            padding: 20px;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
             border: 10px solid black;
         }
 
-        #book-detail{
+        #book-detail {
             width: 100%;
             height: auto;
             text-align: center;
             background-color: darkgray;
         }
 
-        #title{
+        #title {
             padding: 30px;
             margin-top: 30px;
             margin-bottom: 10px;
@@ -47,61 +45,57 @@
             font-weight: 600;
         }
 
-        #id{
+        #id {
             font-size: 30px;
             margin-bottom: 20px;
             color: white;
         }
 
-        #text{
-            font-size: 18px;
+        #text {
+            font-size: 20px;
             margin-bottom: 20px;
             color: white;
         }
 
-        #thumnail{
-            width: auto;
-            height: 93vh;
-            background-color: lightcyan;
+        #thumbnail {
+            width: 150px;
+            height: 150px;
         }
 
+        #bookElememt {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #idBook {
+            font-size: 50px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
-<body>
 
-    <div class="container">
+<body onload="getBookDetails()">
+
+    <div id="wrapper">
+
         <div id="book-detail">
-            <!-- <p id="title">accusamus beatae ad facilis cum similique qui sunt</p>
-            <p id="id">1</p>
+            <p id="title"></p>
+            <p id="id"></p>
             <p id="text">Reize the brower window to see that the page is responsive by the way.</p>
-            <img id="thumnail" src="./"> -->
+        </div>
+
+        <div id="bookElememt">
+            <div id="idBook"></div>
+           <img id="thumbnail" src="" alt="">
         </div>
     </div>
 
-    <script>
-        let bookId = document.getElementById('bookID');
-        let bookDetail = document.getElementById('book-detail');
-
-        function getBookDetails(){
-
-            fetch(`https://jsonplaceholder.typicode.com/photos/${bookId}`)
-            .then((response) => {
-                let data = response.data;
-                
-                // bookDetail.innerHTML = 
-                //     `<p id="title">${data.title}</p>
-                //     <p id="id">${data.id}</p>
-                //     <p id="text">Reize the brower window to see that the page is responsive by the way.</p>
-                //     <img id="thumnail" src="./" alt="">
-                //     <div id="thumbnail" src="${data.thumnbailUrl}"></div>
-                //     `;
-
-                console.log(data);
-            }).catch((error) => {
-                console.log(error);
-            })
-        }
-    </script>
-    
+    <script src="./script.js"></script>
 </body>
+
 </html>
