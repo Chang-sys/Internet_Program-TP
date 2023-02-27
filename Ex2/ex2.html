@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Guessing</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <img class="image" src="./monocleEmoji.png">
+        <p class="textHeader">I know your <span style="color: aqua;">Gender</span></p>
+
+        <!-- inputField -->
+        <div class="inputField">
+            <input id="name" type="text" placeholder="Tell me your name" maxlength="15">
+            <button id="btn-guess">Guess</button>
+        </div>
+
+        <div id="loading-ring" hidden></div>
+
+        <div id="content">
+
+            <p id="userName"></p>
+            <p id="gender"></p>
+            <p id="guess"></p>
+        </div>
+    </div>
+
+    <script>
+        let btnGuess = document.getElementById('btn-guess');
+        let getName = document.getElementById('name');
+        let nameField = document.getElementById('userName');
+        let gender = document.getElementById('gender');
+        let guessPercent = document.getElementById('guess');
+
+        let loadingRing = document.getElementById('loading-ring');
+
+        let showContent = document.getElementById('content');
+
+        function checkEmptyStrig() {
+            if (getName.value == "") {
+                alert("Please enter your name!");
+                return false;
+            }
+        }
+
+        function getGender() {
+            nameField.innerHTML = " ";
+            gender.innerHTML = " ";
+            guessPercent.innerHTML = " ";
+
+            loadingRing.hidden = false; 
+            showContent.style.display = "none";
+
+            let getName = document.getElementById('name').value;
+            fetch(`https://api.genderize.io/?name=${getName}`)
+            .then(async (response) => {
+                const data = await response.json();
+
+                showContent.style.display = "block";
+
+                nameField.innerHTML = getName;
+                gender.innerHTML = data.gender;
+                if(getName == ""){
+                    guessPercent.innerHTML = `<div id="waring">Name field is Empty!Try Again...</div>`;
+                }else{
+                    guessPercent.innerHTML = `<div id="guess">${data.probability*100}%</div>`;
+                }
+                
+
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                loadingRing.hidden = true;
+            });
+        }
+
+        btnGuess.onclick = () => {
+            checkEmptyStrig();
+            getGender();
+        }
+    </script>
+
+</body>
+
+</html>

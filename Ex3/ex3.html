@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationality Guessing</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <img class="image" src="./earth.png">
+        <p class="textHeader">I know your <span style="color: aqua;">Home</span></p>
+
+        <!-- inputField -->
+        <div class="inputField">
+            <input id="name" type="text" placeholder="Tell me your name" maxlength="15">
+            <button id="btn-guess">Guess</button>
+        </div>
+
+        <!-- loading -->
+        <div id="loading-ring" hidden></div>
+
+        <!-- show list of information from name -->
+
+        <div id="content">
+            <div id="elements"></div>
+        </div>
+    </div>
+
+    <script>
+        const getName = document.getElementById('name');
+        const btnGuess = document.getElementById('btn-guess');
+        const elementField = document.getElementById('elements');
+
+        const loadingRing = document.getElementById('loading-ring');
+
+        const showContent = document.getElementById('content');
+
+        function checkEmptyStrig() {
+            if (getName.value == "") {
+                alert("Please enter your name!");
+                return false;
+            }
+        }
+
+        function getGender() {
+            elementField.innerHTML = " ";
+
+            loadingRing.hidden = false;
+            showContent.style.display = "none";
+            fetch(`https://api.nationalize.io/?name=${getName.value}`)
+                .then(async (response) => {
+                    response.json().then((data) => {
+                        showContent.style.display = "block";
+
+                        if (getName.value = "") {
+                            showContent.innerHTML +=
+                                `<div id="content">
+                                    Name is empty please input!Try Again...
+                                 </div>`;
+                        } else {
+                            let country = data.country;
+                            for (let i of country) {
+                                elementField.innerHTML +=
+                                    `<div id="element">
+                                        <p id="country">${i.country_id}</p>
+                                        <p id="guessRate">${(i.probability * 100).toFixed(2)}%</p>
+                                    </div>`;
+                            }
+                        }
+
+                        console.log(data);
+                    })
+                }).catch((error) => {
+                    console.log(error);
+                }).finally(() => {
+                    loadingRing.hidden = true;
+                });
+        }
+
+        btnGuess.onclick = () => {
+            checkEmptyStrig();
+            getGender();
+        }
+    </script>
+
+</body>
+
+</html>

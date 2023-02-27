@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="addField">
+            <form class="create">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="C programming"><br>
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" placeholder="coding"><br>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" placeholder="1,000 riel"><br>
+                <input id="btn-add" type="submit" value="Add">
+            </form>
+        </div>
+        
+        
+        <div id="bookList"">
+            <div id="loading-ring" hidden></div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+        const bookField = document.getElementById('bookList');
+        const addButton = document.getElementById('btn-add');
+        const loadingRing = document.getElementById('loading-ring');
+
+        function getBook(){
+            loadingRing.hidden = false;
+
+            fetch('https://jsonplaceholder.typicode.com/photos')
+            .then(async (response) =>{
+                let data = await response.json();
+
+                let bookitem = "";
+                data.forEach((item) =>{
+                    bookitem += 
+                        `<div id="item">
+                            <canvas id="thumbnail" style="background-image: url(${item.thumbnailUrl});"></canvas>
+                            <p id="bookName">${item.title}</p>
+                            <p>Album id: ${item.albumId} reil</p>
+                            <p>Category: ${item.id}</p>
+                            <a id="bookID" href="./Book_Detail.html" target="_blank" value="${item.id}">See</a>
+                        </div>`;
+                })
+
+                bookField.innerHTML = bookitem;
+
+                console.log(data);
+
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                loadingRing.hidden = true;
+            });
+        }
+
+        // addButton.onClick = () => {
+        //     getBook();
+        // };
+
+        getBook();
+
+    </script>
+
+    
+    
+</body>
+</html>

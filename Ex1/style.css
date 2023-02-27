@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+.container {
+    width: 70%;
+    height: 93vh;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px;
+    border: 10px solid black;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.textHeader {
+    font-size: 80px;
+    font-family: 'Irish Grover', cursive;
+}
+
+#btn-tell {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 400px;
+    height: 60px;
+    font-size: 30px;
+    font-family: 'Irish Grover', cursive;
+    background-color: lightblue;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#content {
+    width: 60%;
+    height: auto;
+    background-color: lightgray;
+    border-radius: 15px;
+    padding: 30px;
+    display: none;
+}
+
+#activity-name {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tag {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.tag svg {
+    width: 30px;
+    height: 30px;
+    fill: blue;
+}
+
+.user {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.user svg {
+    width: 30px;
+    height: 30px;
+    fill: blue;
+}
+
+.price {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.price svg {
+    width: 30px;
+    height: 30px;
+    fill: blue;
+}
+
+.link {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.link svg {
+    width: 30px;
+    height: 30px;
+    fill: blue;
+}
+
+/* loading  */
+#loading-ring {
+    position: absolute;
+    margin-top: 450px;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

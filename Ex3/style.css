@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+.container {
+    width: 70%;
+    height: 93vh;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px;
+    border: 10px solid black;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.textHeader {
+    font-size: 80px;
+    font-family: 'Irish Grover', cursive;
+}
+
+.inputField {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    width: 450px;
+    height: 50px;
+    border-radius: 15px;
+    text-indent: 10px;
+    font-size: 20px;
+}
+
+#btn-guess {
+    margin: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(37 99 235);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#content {
+    width: 60%;
+    height: auto;
+    margin-top: 5px;
+    padding: 20px;
+    display: none;
+    /* background-color: aqua; */
+}
+
+#elements {
+    display: flex;
+    flex-direction: column;
+}
+
+#element {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#country {
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#guessRate {
+    color: orangered;
+    font-size: 35px;
+    font-weight: 700;
+    margin-right: 50px;
+    padding: 10px;
+}
+
+#waring {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: red;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* loading  */
+#loading-ring {
+    position: absolute;
+    margin-top: 480px;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid black;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.addField{
+    width: 25%;
+    min-height: 650px;
+    height: auto;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.create{
+    display: flex;
+    flex-direction: column;
+}
+
+.create #name, #category, #price{
+    text-indent: 5px;
+    margin-top: 7px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#btn-add{
+    text-align: center;
+    width: 50px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+#bookList{
+    width: 100vw;
+    height: 89vh;
+    padding: 0 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 2.5%;
+    background-color: lightgray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#item{
+    width: 200px;
+    height: 430px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+#thumbnail{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+#bookName{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#bookID{
+    margin-top: 20px;
+}
+
+
+/* loading  */
+#loading-ring {
+    position: absolute;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

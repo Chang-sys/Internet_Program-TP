@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 40px 0px 40px;
+    border: 10px solid black;
+    position: sticky;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.textHeader {
+    font-size: 50px;
+    font-family: 'Irish Grover', cursive;
+    margin-bottom: 25px;
+}
+
+.selectField {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#optionList {
+    width: 39%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-indent: 10px;
+    cursor: pointer;
+
+    /* Arrow */
+    appearance: none;
+    background-image: url("./down-arrow.png");
+    background-repeat: no-repeat;
+    background-position: right 50px top 50%;
+    background-size: 40px;
+}
+
+#wrapper {
+    width: 100%;
+    height: auto;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#content {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-self: center;
+    row-gap: 30px;
+
+}
+
+#item {
+    width: 350px;
+    height: 150px;
+    margin-left: 30px;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#country {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#webpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #3498db;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+#icon {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+
+/* loading  */
+#loading-ring {
+    position: absolute;
+    margin-top: 450px;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
