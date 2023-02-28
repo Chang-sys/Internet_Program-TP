@@ -5,7 +5,7 @@
     <li>Exercise 1 - Activity Suggestion</li>
   </ul>
 </a>
-<a href="[https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj.github.dev/](https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj-5503.preview.app.github.dev/Ex2/ex2.html)" target="_blank">
+<a href="https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj-5503.preview.app.github.dev/Ex2/ex2.html" target="_blank">
   <ul>
     <li>Exercise 2 - Gender Guessing</li>
   </ul>
