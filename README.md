@@ -15,12 +15,12 @@
     <li>Exercise 3 - Nationality Guessing</li>
   </ul>
 </a>
-<a href=https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj.github.dev/" target="_blank">
+<a href="https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj-5503.preview.app.github.dev/Ex3/ex4.html" target="_blank">
   <ul>
     <li>Exercise 4 - University Listing</li>
   </ul>
 </a>
-<a href="https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj-5504.preview.app.github.dev/Ex5/ex5.html" target="_blank">
+<a href="https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj-5503.preview.app.github.dev/Ex3/ex5.html" target="_blank">
   <ul>
     <li>Exercise 5 - Book Store</li>
   </ul>
