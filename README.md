@@ -19,8 +19,8 @@
   <ul>
     <li>Exercise 4 - University Listing</li>
   </ul>
-  <span>!Problem:(OnlineHost not work with API but in localHost work fine)</span>
 </a>
+ <span>!Problem:(OnlineHost not work with API but in localHost work fine)</span>
 <a href="https://chang-sys-symmetrical-garbanzo-w5wjpgj65pjcv5gj-5504.preview.app.github.dev/Ex5/ex5.html" target="_blank">
   <ul>
     <li>Exercise 5 - Book Store</li>
