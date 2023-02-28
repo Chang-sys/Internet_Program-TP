@@ -12,14 +12,13 @@ body {
 
 .container {
     width: 70%;
-    height: 93vh;
     margin-left: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 70px;
+    padding: 30px 30px 80px 30px;
     border: 10px solid black;
 }
 
@@ -68,7 +67,6 @@ body {
     margin-top: 5px;
     padding: 20px;
     display: none;
-    /* background-color: aqua; */
 }
 
 #elements {
